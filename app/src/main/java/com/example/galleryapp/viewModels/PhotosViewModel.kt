@@ -19,7 +19,11 @@ class PhotosViewModel : ViewModel() {
                 Photo(
                     id = photo.id,
                     url = "https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg",
-                    title = photo.title
+                    title = photo.title,
+                    dateTaken = photo.datetaken,
+                    ownerName = photo.ownername,
+                    tags = photo.tags,
+                    views = photo.views
                 )
             }
             _photosLiveData.value = photosList

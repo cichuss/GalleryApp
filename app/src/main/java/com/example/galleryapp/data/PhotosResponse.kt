@@ -15,5 +15,9 @@ data class PhotoResponse(
     val secret: String,
     val server: String,
     val farm: Int,
-    val title: String
+    val title: String,
+    val datetaken: String?,
+    val ownername: String?,
+    val tags: String?,
+    val views: String?
 )

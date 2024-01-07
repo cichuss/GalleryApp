@@ -1,9 +1,8 @@
 package com.example.galleryapp.network
 import com.example.galleryapp.data.PhotosSearchResponse
-import com.example.galleryapp.network.ApiConstants.FLICKR_API_KEY
 import retrofit2.http.GET
 
 interface ApiService {
-    @GET("?method=flickr.photos.search&format=json&nojsoncallback=1&text=dogs&api_key=$FLICKR_API_KEY")
+    @GET("?method=flickr.interestingness.getList&api_key=${ApiConstants.FLICKR_API_KEY}&per_page=500&format=json&nojsoncallback=1&extras=date_taken,owner_name,tags,views")
     suspend fun fetchImages(): PhotosSearchResponse
 }
